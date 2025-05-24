@@ -28,7 +28,7 @@
                 <configuration>
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                     <useSystemOut>true</useSystemOut>
-                    <mainClass>example.sample<mainClass>
+                    <mainClass>example.sample</mainClass>
                 </configuration>
             </plugin>
         </plugins>
