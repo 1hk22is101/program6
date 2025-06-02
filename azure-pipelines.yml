@@ -10,7 +10,7 @@ pool:
   name: Default
 
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -22,6 +22,7 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/target'
     Contents: '**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
